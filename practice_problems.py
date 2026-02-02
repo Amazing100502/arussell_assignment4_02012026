@@ -54,7 +54,31 @@ tracker.add(20)
 tracker.add(10)
 tracker.get_unique_count() → 2
 """
+# Practice Problem 3: Unique Value Counter
+# ---------------------------------------------------------
 
+class UniqueTracker:
+    def __init__(self):
+        self.values = set()   # store unique integers
+
+    def add(self, num):
+        if not isinstance(num, int):
+            return "Error: value must be an integer."
+        self.values.add(num)
+
+    def get_unique_count(self):
+        return len(self.values)
+
+
+"""
+Justification:
+A set is the ideal data structure for this task because it automatically enforces uniqueness
+and provides O(1) average-time insertion and membership operations. Each call to add() simply
+inserts into the set, and get_unique_count() returns the size of the set in O(1) time. This
+makes the structure efficient for handling a continuous stream of values while maintaining
+an accurate count of unique integers.
+
+""" 
 class UniqueTracker:
     def __init__(self):
         pass
