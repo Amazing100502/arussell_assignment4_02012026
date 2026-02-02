@@ -1,3 +1,17 @@
-# Pick one question from timed_challenge.txt
-# Paste the question as a comment below
-# Set a timer for 30 minutes and complete the question!
+def first_non_repeating_char(s):
+    if not isinstance(s, str):
+        return "Error: Input must be a string."
+
+    if s == "":
+        return None
+
+    freq = {}  # dictionary to count characters
+
+    for char in s:
+        freq[char] = freq.get(char, 0) + 1
+
+    for char in s:
+        if freq[char] == 1:
+            return char
+
+    return None
