@@ -15,3 +15,8 @@ def first_non_repeating_char(s):
             return char
 
     return None
+print(first_non_repeating_char("aabbcdd"))   # c
+print(first_non_repeating_char("aabb"))      # None
+print(first_non_repeating_char(""))          # None
+print(first_non_repeating_char(123))         # Error message
+print(first_non_repeating_char("swiss"))     # w
